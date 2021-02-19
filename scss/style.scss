@@ -1,4 +1,11 @@
-body{
-    background-color: grey;
+@import "./Utils/fonction";
+@import "./Utils/mixins";
+@import "./Utils/placeholder";
+@import "./Utils/variables";
+
+footer{
+    background-color: $color-secondary;
 }
+
+
 
