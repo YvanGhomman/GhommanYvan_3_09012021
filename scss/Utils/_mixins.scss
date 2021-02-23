@@ -21,3 +21,34 @@
     text-decoration: none;
     color: $color;
 }
+@mixin new{
+    position: absolute;
+    right: 30px;
+    background-color: $color-tertiary;
+    color: darken($color-tertiary , 30%);
+    padding: 7px 20px;
+    font-weight: bold;
+}
+@mixin img-index{
+    object-fit: cover;
+    width: 100%;
+}
+@mixin menu-article{
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 15px ;
+}
+@mixin menu-article--inside{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0 0 0;
+}
+@mixin bouton{
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    box-shadow: 0px 5px 10px 1px grey;
+    color: white;
+}
