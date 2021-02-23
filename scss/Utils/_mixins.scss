@@ -4,3 +4,20 @@
 @mixin Font-txt {
     font-family: 'Roboto', sans-serif;
 }
+@mixin colour-pastel ($colour) {
+    background-color: lighten($colour, 35%);
+}
+@mixin shadow-box {
+    box-shadow: 0px 5px 5px 1px $color-maploc;
+}
+@mixin heart {
+    font-weight: bolder;
+    background:-webkit-linear-gradient(top,$color-primary 25%, $color-secondary 75%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
+@mixin link($color){
+    text-decoration: none;
+    color: $color;
+}
