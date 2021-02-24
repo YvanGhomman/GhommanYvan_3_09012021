@@ -53,6 +53,7 @@ a {
 .index__loca--input {
   text-align: center;
   width: 40%;
+  max-width: 150px;
   border: none;
   color: #353535;
   background-color: #eaeaea;
@@ -80,6 +81,11 @@ a {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 0px 5px 10px 1px grey;
   color: white;
+  cursor: pointer;
+}
+.reservation button:hover {
+  box-shadow: 0px 5px 5px 1px #6e6e6e;
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
 }
 
 .fonction {
@@ -213,7 +219,7 @@ a {
   font-family: "Shrikhand", cursive;
   margin: 0;
   padding: 20px 0 20px 0;
-  font-weight: 350;
+  font-weight: 300;
 }
 .footer__i-txt {
   display: flex;
@@ -270,7 +276,7 @@ a {
 .menu__plates h2 {
   margin-left: 10px;
   font-size: 20px;
-  font-weight: 350;
+  font-weight: 300;
   border-bottom: solid 3px #99E2D0;
   width: 50px;
   line-height: 35px;
@@ -306,7 +312,12 @@ a {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 0px 5px 10px 1px grey;
   color: white;
+  cursor: pointer;
   margin: 50px auto 0px;
+}
+.menu button:hover {
+  box-shadow: 0px 5px 5px 1px #6e6e6e;
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
 }
 
 .bckg {

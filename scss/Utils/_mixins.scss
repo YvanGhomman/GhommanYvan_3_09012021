@@ -7,9 +7,10 @@
 @mixin colour-pastel ($colour) {
     background-color: lighten($colour, 35%);
 }
-@mixin shadow-box {
-    box-shadow: 0px 5px 5px 1px $color-maploc;
+@mixin shadow-box ($color) {
+    box-shadow: 0px 5px 5px 1px $color;
 }
+
 @mixin heart {
     font-weight: bolder;
     background:-webkit-linear-gradient(top,$color-primary 25%, $color-secondary 75%);
@@ -51,4 +52,9 @@
     background: linear-gradient(to bottom right, $color-secondary, $color-primary);
     box-shadow: 0px 5px 10px 1px grey;
     color: white;
+    cursor: pointer;
+}
+@mixin button--hover {
+    @include shadow-box($color-button-shadow-hover);
+    background: linear-gradient(to bottom right, lighten($color-secondary, 5%), lighten($color-primary, 5%));
 }
