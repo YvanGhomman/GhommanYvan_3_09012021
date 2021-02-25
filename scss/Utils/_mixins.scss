@@ -24,11 +24,13 @@
 }
 @mixin new{
     position: absolute;
-    right: 30px;
+    right: 10px;
     background-color: $color-tertiary;
     color: darken($color-tertiary , 30%);
-    padding: 7px 20px;
+    padding: 6px 12px;
     font-weight: bold;
+    font-size: 14px;
+    top: 1px;
 }
 @mixin img-index{
     object-fit: cover;

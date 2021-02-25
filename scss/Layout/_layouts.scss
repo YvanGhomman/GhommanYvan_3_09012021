@@ -4,13 +4,9 @@ body{
     padding: 0;
 }
 
-
-
-
 a{
     @include link(black)
 }
-
 
 .header{
     display: flex;
@@ -29,7 +25,6 @@ a{
         position: absolute;
         left: 5px;
         top: 28px;
-
     }
 }
 
@@ -90,11 +85,18 @@ a{
 .fonction{
     margin: 0;
     padding: 0 20px 50px 20px;
+    &__box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
 }
 
 .step{
     display: flex;
     align-items: center;
+    max-width: 500px;
     width: 100%;
     margin: 20px 0 20px 0;
     & p{
@@ -135,31 +137,39 @@ a{
 }
 .bloc-restaurant{
     margin: 0px;
-    padding: 40px 20px 20px 20px;
+    padding: 40px 10px 80px 10px;
     background-color: $color-index;
-
+    &-box{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    & h2{
+        padding-left: 10px;
+    }
 }
 .rest{
+    position: relative;
     @include shadow-box ($color-maploc);
     border-radius: 20px;
-    margin : 20px 0 30px 0;
-    display: flex;
+    margin : 20px 10px 10px 10px;
+    width: 100%;
+    max-width: 335px;
+    height: 250px;
+    & a{
+        width: 100%;
+    }
     &__img--index{
         @include img-index;
         border-radius: 20px 20px 0 0;
-        height: 250px;
+        height: 70%;
     }
     &__img--card{
         @include img-index;
         height: 250px;
     }
-    &__new1{
+    &__new{
         @include new;
-        top: 870px;
-    }
-    &__new2{
-        @include new;
-        top: 1225px;
     }
     &__inside{
         display: flex;
