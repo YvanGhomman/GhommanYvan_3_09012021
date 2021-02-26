@@ -13,7 +13,9 @@ a{
     align-items: center;
     padding: 20px 0;
     height: 30px;
-    
+    &__menu{
+        @include shadow-box($color-maploc);
+    }
     &__img{
         display: block;
         margin: auto;
@@ -25,6 +27,26 @@ a{
         position: absolute;
         left: 5px;
         top: 28px;
+        @media(min-width:760px) {
+            display: none;
+        }
+    }
+    &__accueil{
+        display: none;
+        @media(min-width:760px) {
+            @include Font-txt;
+            display: block;
+            position: absolute;
+            left: 30px;
+            top: 10px;
+            font-weight: 300;
+            border-bottom: solid 3px $color-tertiary;
+            width: 30px;
+            &:hover{
+                color: $color-primary
+            }
+            
+        }
     }
 }
 
@@ -85,6 +107,11 @@ a{
 .fonction{
     margin: 0;
     padding: 0 20px 50px 20px;
+    & h2{
+        @media(min-width:760px) {
+            text-align: center;
+        }
+    }
     &__box{
         display: flex;
         flex-direction: column;
@@ -139,13 +166,16 @@ a{
     margin: 0px;
     padding: 40px 10px 80px 10px;
     background-color: $color-index;
+    & h2{
+        padding-left: 10px;
+        @media(min-width:760px) {
+            text-align: center;
+        }
+    }
     &-box{
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-    }
-    & h2{
-        padding-left: 10px;
     }
 }
 .rest{
@@ -289,6 +319,17 @@ a{
 }
 .bckg{
     background-color: $color-index;
+    width: 100%;
+    @media(min-width:760px){
+        margin: auto;
+        width: 75%;
+        min-width: 760px;
+    }
+    @media(min-width:1024px) {
+        margin: auto;
+        width: 75%;
+        max-width: 1024px;
+    }
 }
 .strong{
     font-weight: bolder;
