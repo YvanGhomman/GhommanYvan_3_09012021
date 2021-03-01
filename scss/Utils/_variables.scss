@@ -4,7 +4,13 @@ $color-tertiary:#99E2D0;
 $color-footer:#353535;
 $color-index:#f6f6f6;
 $color-maploc: #eaeaea;
-$color-button-shadow-hover:#6e6e6e
+$color-button-shadow-hover:#6e6e6e;
+
+$num-elm: 10;
+$anim-dur: 2000ms;
+$anim-delay: $anim-dur/$num-elm;
+
+
 
 
 

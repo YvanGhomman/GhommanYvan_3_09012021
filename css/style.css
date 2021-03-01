@@ -252,6 +252,8 @@ a {
 .rest__inside i {
   font-size: 25px;
   padding-right: 15px;
+  opacity: 0.5;
+  transition: opacity 1000ms;
 }
 .rest__inside i:hover {
   font-weight: bolder;
@@ -259,6 +261,7 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  opacity: 1;
 }
 .rest__inside i:active {
   font-weight: bolder;
@@ -318,6 +321,8 @@ a {
 .menu__title i {
   font-size: 25px;
   padding-right: 10px;
+  opacity: 0.5;
+  transition: opacity 1000ms;
 }
 .menu__title i:hover {
   font-weight: bolder;
@@ -325,8 +330,9 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  opacity: 1;
 }
-.menu__title i:active {
+.menu__title i:onclick {
   font-weight: bolder;
   background: -webkit-linear-gradient(top, #9356DC 25%, #FF79DA 75%);
   background-clip: text;
@@ -351,15 +357,58 @@ a {
   border-radius: 20px;
   padding: 15px;
   margin-bottom: 15px;
+  width: 97%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideup 2000ms both;
+}
+.menu__plates--elm--1 {
+  animation-delay: 200ms;
+}
+.menu__plates--elm--2 {
+  animation-delay: 400ms;
+}
+.menu__plates--elm--3 {
+  animation-delay: 600ms;
+}
+.menu__plates--elm--4 {
+  animation-delay: 800ms;
+}
+.menu__plates--elm--5 {
+  animation-delay: 1000ms;
+}
+.menu__plates--elm--6 {
+  animation-delay: 1200ms;
+}
+.menu__plates--elm--7 {
+  animation-delay: 1400ms;
+}
+.menu__plates--elm--8 {
+  animation-delay: 1600ms;
+}
+.menu__plates--elm--9 {
+  animation-delay: 1800ms;
+}
+.menu__plates--elm--10 {
+  animation-delay: 2000ms;
+}
+.menu__plates--elm:hover .check {
+  display: block;
 }
 .menu__plates--elm h3 {
   margin: 0;
+}
+.menu__plates--elmin {
+  justify-content: space-between;
+  width: 100%;
 }
 .menu__plates--elminside {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 5px 0 0 0;
+  width: 100%;
 }
 .menu__plates--elminside p {
   margin: 0;
@@ -384,6 +433,10 @@ a {
   background: linear-gradient(to bottom right, #ff93e1, #a16be0);
 }
 
+.check {
+  display: none;
+}
+
 .bckg {
   background-color: #f6f6f6;
   width: 100%;
@@ -405,6 +458,21 @@ a {
 
 .strong {
   font-weight: bolder;
+}
+
+.price {
+  padding-right: 5px;
+}
+
+@keyframes slideup {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

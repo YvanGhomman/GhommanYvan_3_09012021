@@ -224,8 +224,11 @@ a{
     & i{
         font-size: 25px;
         padding-right: 15px;
+        opacity: 0.5;
+        transition: opacity 1000ms;
         &:hover{
             @include heart;
+            opacity: 1;
         }
         &:active{
             @include heart;
@@ -278,13 +281,17 @@ a{
         justify-content: space-between;
         padding: 10px 20px 10px 30px;
         font-size: 18px;
+        
         & i{
             font-size: 25px;
             padding-right: 10px;
+            opacity: 0.5;
+            transition: opacity 1000ms;
             &:hover{
                 @include heart;
+                opacity: 1;
             }
-            &:active{
+            &:onclick{
                 @include heart;
             }
         }
@@ -303,18 +310,34 @@ a{
         &--elm{
             @include shadow-box($color-maploc);
             @include menu-article;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: slideup $anim-dur both;
+            @for $x from 1 through $num-elm {
+                &--#{$x} {
+                    animation-delay: $anim-delay*$x;
+                }
+            }
+            &:hover .check{
+                display: block;
+            }
             & h3{
                 margin: 0;
             }
-            &inside{
-                @include menu-article--inside;
-                & p{
-                    margin: 0;
-                }
+            &in{
+                justify-content: space-between;
+                width: 100%;
+                &side{
+                    @include menu-article--inside;
+                    & p{
+                        margin: 0;
+                    }
             }
 
         }
     }
+}
     & button{
         @include Font-txt;
         font-size: 16px;
@@ -328,6 +351,9 @@ a{
             @include button--hover;
         }
     }
+}
+.check{
+    display: none;
 }
 .bckg{
     background-color: $color-index;
@@ -345,5 +371,8 @@ a{
 }
 .strong{
     font-weight: bolder;
+}
+.price{
+    padding-right: 5px;
 }
 
