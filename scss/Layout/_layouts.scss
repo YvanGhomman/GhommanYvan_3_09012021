@@ -193,10 +193,22 @@ a{
         @include img-index;
         border-radius: 20px 20px 0 0;
         height: 70%;
+        object-position: 50% 100%;
+        &2{
+        @include img-index;
+        border-radius: 20px 20px 0 0;
+        height: 70%;
+        object-position: 50% 60%;
+        }
     }
     &__img--card{
         @include img-index;
-        height: 250px;
+        height: 300px;
+        object-position: 50% 50%;
+        @media (min-width:426px) {
+            height: 500px;
+            object-position: 50% 50%;
+        }
     }
     &__new{
         @include new;
