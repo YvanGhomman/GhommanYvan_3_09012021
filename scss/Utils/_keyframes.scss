@@ -9,3 +9,45 @@
         opacity: 1;
     }                
 }
+
+@keyframes slideleft{
+    from{
+        transform: scaleX(0);
+        opacity: 1;
+    }
+    to{
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideright{
+    from{
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    to{
+        transform: scaleX(0);
+        opacity: 0;
+    }
+}
+
+@keyframes slideleft2{
+    from{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(-20px);
+        opacity: 1;
+    }
+}
+
+@keyframes rotation{
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}

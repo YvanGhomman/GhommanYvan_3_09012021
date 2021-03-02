@@ -230,9 +230,6 @@ a{
             @include heart;
             opacity: 1;
         }
-        &:active{
-            @include heart;
-        }
     }
 }
 }
@@ -274,6 +271,7 @@ a{
     z-index: 1;
     position: relative;
     top: -75px;
+
     &__title{
         @include Font-title;
         display: flex;
@@ -291,14 +289,15 @@ a{
                 @include heart;
                 opacity: 1;
             }
-            &:onclick{
-                @include heart;
-            }
         }
     }
     &__plates{
         padding: 0 20px;
         margin: 0px 0px 50px 0px;
+        justify-items: center;
+        display: block;
+
+
         & h2{
             margin-left: 10px;
             font-size: 20px;
@@ -307,37 +306,7 @@ a{
             width: 50px;
             line-height: 35px
         }
-        &--elm{
-            @include shadow-box($color-maploc);
-            @include menu-article;
-            display:flex;
-            justify-content: space-between;
-            align-items: center;
-            animation: slideup $anim-dur both;
-            @for $x from 1 through $num-elm {
-                &--#{$x} {
-                    animation-delay: $anim-delay*$x;
-                }
-            }
-            &:hover .check{
-                display: block;
-            }
-            & h3{
-                margin: 0;
-            }
-            &in{
-                justify-content: space-between;
-                width: 100%;
-                &side{
-                    @include menu-article--inside;
-                    & p{
-                        margin: 0;
-                    }
-            }
-
-        }
     }
-}
     & button{
         @include Font-txt;
         font-size: 16px;
@@ -352,9 +321,117 @@ a{
         }
     }
 }
-.check{
-    display: none;
+
+
+
+.menu__plates--elm{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    @include shadow-box($color-maploc);
+    @include menu-article;
+    align-items: center;
+    animation: slideup $anim-dur both;
+    @for $x from 1 through $num-elm {
+        &--#{$x} {
+            animation-delay: $anim-delay*$x;
+        }
+    }
+    & h3{
+        margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        
+    }
+    &:hover .test1{
+        width: 70%;
+        min-width: 0;
+        height: 50px;
+        transition: all 0.5s ease-in-out;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: -15px 0;
+
+    }
+    &:hover .test2{
+        width: 30%;
+        min-width: 150px;
+        transition: all 0.5s ease-in-out; 
+    }
+    &:hover .check{
+        width: 60%;
+        background:$color-tertiary;
+        transition: all 0.5s ease-in-out;
+        opacity: 1;
+    }
+    &:hover .price2{
+        width: 40%;
+        transition: all 0.5s ease-in-out;
+    }
+    &:hover .fa-check-circle{
+        align-items: center;
+        justify-content: center;
+        transform-origin: center;
+        animation: rotation 1000ms forwards;
+
+    }
 }
+
+.test1{
+    width: 80%;
+    transition: all 0.5s ease-in-out;
+    height: 50px;
+    padding: -15px 0;
+    & p{
+        margin: 0;
+        padding: 10px 0 0 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        line-height: 16px;
+    }
+
+}
+.test2{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    min-width: 90px;
+    justify-content: center;
+    border-radius: 0 20px 20px 0;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    height: 80px;
+    margin: -15px;
+
+    & .check{
+        display:flex;
+        opacity: 0;
+        width: 0%;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+        color: white;
+        font-size: 30px;
+        transition: all 0.5s ease-in-out;
+        transform-origin: right;
+    }
+    & .price2{
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        margin: 65px 30px 0 0;
+        transition: all 0.5s ease-in-out;
+        height: 50px;
+        padding: -15px -15px -15px 0;
+
+
+    }
+}
+
+
 .bckg{
     background-color: $color-index;
     width: 100%;
@@ -374,5 +451,7 @@ a{
 }
 .price{
     padding-right: 5px;
+    
 }
+
 
