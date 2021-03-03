@@ -10,39 +10,6 @@
     }                
 }
 
-@keyframes slideleft{
-    from{
-        transform: scaleX(0);
-        opacity: 1;
-    }
-    to{
-        transform: scaleX(1);
-        opacity: 1;
-    }
-}
-
-@keyframes slideright{
-    from{
-        transform: scaleX(1);
-        opacity: 1;
-    }
-    to{
-        transform: scaleX(0);
-        opacity: 0;
-    }
-}
-
-@keyframes slideleft2{
-    from{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-    to{
-        transform: translateX(-20px);
-        opacity: 1;
-    }
-}
-
 @keyframes rotation{
     from{
         transform: rotate(0turn);
@@ -52,17 +19,17 @@
     }
 }
 
-@keyframes getout{
+@keyframes out{
     0%{
         transform: scale(1);
         opacity: 1;
     }
-    40%{
+    60%{
         transform: scale(2);
         opacity: 0;
     }
     100%{
-        transform: translateY(-999px);
+        z-index: -5;
         opacity: 0;
     }
 }
