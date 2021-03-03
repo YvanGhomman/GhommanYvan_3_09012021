@@ -51,3 +51,18 @@
         transform: rotate(1turn);
     }
 }
+
+@keyframes getout{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    40%{
+        transform: scale(2);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-999px);
+        opacity: 0;
+    }
+}

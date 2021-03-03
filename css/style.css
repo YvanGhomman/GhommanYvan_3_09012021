@@ -370,37 +370,37 @@ a {
   margin-bottom: 15px;
   margin: 0 auto 15px auto;
   align-items: center;
-  animation: slideup 2000ms both;
+  animation: slideup 3500ms both;
 }
 .menu__plates--elm--1 {
-  animation-delay: 200ms;
+  animation-delay: 525ms;
 }
 .menu__plates--elm--2 {
-  animation-delay: 400ms;
+  animation-delay: 1050ms;
 }
 .menu__plates--elm--3 {
-  animation-delay: 600ms;
+  animation-delay: 1575ms;
 }
 .menu__plates--elm--4 {
-  animation-delay: 800ms;
+  animation-delay: 2100ms;
 }
 .menu__plates--elm--5 {
-  animation-delay: 1000ms;
+  animation-delay: 2625ms;
 }
 .menu__plates--elm--6 {
-  animation-delay: 1200ms;
+  animation-delay: 3150ms;
 }
 .menu__plates--elm--7 {
-  animation-delay: 1400ms;
+  animation-delay: 3675ms;
 }
 .menu__plates--elm--8 {
-  animation-delay: 1600ms;
+  animation-delay: 4200ms;
 }
 .menu__plates--elm--9 {
-  animation-delay: 1800ms;
+  animation-delay: 4725ms;
 }
 .menu__plates--elm--10 {
-  animation-delay: 2000ms;
+  animation-delay: 5250ms;
 }
 .menu__plates--elm h3 {
   margin: 0;
@@ -408,7 +408,7 @@ a {
   overflow: hidden;
   white-space: nowrap;
 }
-.menu__plates--elm:hover .test1 {
+.menu__plates--elm:hover .text {
   width: 70%;
   min-width: 0;
   height: 50px;
@@ -418,7 +418,7 @@ a {
   white-space: nowrap;
   padding: -15px 0;
 }
-.menu__plates--elm:hover .test2 {
+.menu__plates--elm:hover .check-price {
   width: 30%;
   min-width: 150px;
   transition: all 0.5s ease-in-out;
@@ -429,7 +429,7 @@ a {
   transition: all 0.5s ease-in-out;
   opacity: 1;
 }
-.menu__plates--elm:hover .price2 {
+.menu__plates--elm:hover .price {
   width: 40%;
   transition: all 0.5s ease-in-out;
 }
@@ -440,13 +440,13 @@ a {
   animation: rotation 1000ms forwards;
 }
 
-.test1 {
+.text {
   width: 80%;
   transition: all 0.5s ease-in-out;
   height: 50px;
   padding: -15px 0;
 }
-.test1 p {
+.text p {
   margin: 0;
   padding: 10px 0 0 0;
   text-overflow: ellipsis;
@@ -455,7 +455,7 @@ a {
   line-height: 16px;
 }
 
-.test2 {
+.check-price {
   display: flex;
   align-items: center;
   width: 20%;
@@ -467,7 +467,7 @@ a {
   height: 80px;
   margin: -15px;
 }
-.test2 .check {
+.check-price .check {
   display: flex;
   opacity: 0;
   width: 0%;
@@ -479,7 +479,7 @@ a {
   transition: all 0.5s ease-in-out;
   transform-origin: right;
 }
-.test2 .price2 {
+.check-price .price {
   display: flex;
   width: 100%;
   justify-content: flex-end;
@@ -512,8 +512,80 @@ a {
   font-weight: bolder;
 }
 
-.price {
-  padding-right: 5px;
+.loading {
+  left: 48%;
+  top: 55%;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border-top: solid 4px #9356DC;
+  display: flex;
+  margin: auto;
+  animation: rotation 0.5s linear infinite;
+}
+@media (max-width: 768px) {
+  .loading {
+    left: 42%;
+  }
+}
+@media (max-width: 480px) {
+  .loading {
+    left: 38%;
+  }
+}
+.loading2 {
+  left: 43%;
+  top: 45%;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border-bottom: solid 4px #99E2D0;
+  display: flex;
+  margin: auto;
+  animation: rotation 1.5s linear infinite reverse;
+}
+@media (max-width: 768px) {
+  .loading2 {
+    left: 40%;
+  }
+}
+@media (max-width: 480px) {
+  .loading2 {
+    left: 35%;
+  }
+}
+.loading3 {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  border-bottom: solid 4px #FF79DA;
+  display: flex;
+  margin: auto;
+  animation: rotation 1s linear infinite;
+}
+@media (max-width: 768px) {
+  .loading3 {
+    left: 38%;
+  }
+}
+@media (max-width: 480px) {
+  .loading3 {
+    left: 32%;
+  }
+}
+.loading__box {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  animation: getout 0.8s 1.5s ease-in-out both;
+  background-color: #eaeaea;
 }
 
 @keyframes slideup {
@@ -562,6 +634,20 @@ a {
   }
   to {
     transform: rotate(1turn);
+  }
+}
+@keyframes getout {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  40% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-999px);
+    opacity: 0;
   }
 }
 

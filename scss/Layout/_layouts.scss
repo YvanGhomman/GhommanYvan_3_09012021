@@ -271,7 +271,6 @@ a{
     z-index: 1;
     position: relative;
     top: -75px;
-
     &__title{
         @include Font-title;
         display: flex;
@@ -279,7 +278,6 @@ a{
         justify-content: space-between;
         padding: 10px 20px 10px 30px;
         font-size: 18px;
-        
         & i{
             font-size: 25px;
             padding-right: 10px;
@@ -322,8 +320,6 @@ a{
     }
 }
 
-
-
 .menu__plates--elm{
     display: flex;
     justify-content: space-between;
@@ -334,7 +330,7 @@ a{
     animation: slideup $anim-dur both;
     @for $x from 1 through $num-elm {
         &--#{$x} {
-            animation-delay: $anim-delay*$x;
+            animation-delay: $anim-delay*$x*1.5;
         }
     }
     & h3{
@@ -344,7 +340,7 @@ a{
         white-space: nowrap;
         
     }
-    &:hover .test1{
+    &:hover .text{
         width: 70%;
         min-width: 0;
         height: 50px;
@@ -355,7 +351,7 @@ a{
         padding: -15px 0;
 
     }
-    &:hover .test2{
+    &:hover .check-price{
         width: 30%;
         min-width: 150px;
         transition: all 0.5s ease-in-out; 
@@ -366,7 +362,7 @@ a{
         transition: all 0.5s ease-in-out;
         opacity: 1;
     }
-    &:hover .price2{
+    &:hover .price{
         width: 40%;
         transition: all 0.5s ease-in-out;
     }
@@ -375,11 +371,10 @@ a{
         justify-content: center;
         transform-origin: center;
         animation: rotation 1000ms forwards;
-
     }
 }
 
-.test1{
+.text{
     width: 80%;
     transition: all 0.5s ease-in-out;
     height: 50px;
@@ -394,7 +389,7 @@ a{
     }
 
 }
-.test2{
+.check-price{
     display: flex;
     align-items: center;
     width: 20%;
@@ -418,7 +413,7 @@ a{
         transition: all 0.5s ease-in-out;
         transform-origin: right;
     }
-    & .price2{
+    & .price{
         display: flex;
         width: 100%;
         justify-content: flex-end;
@@ -449,9 +444,69 @@ a{
 .strong{
     font-weight: bolder;
 }
-.price{
-    padding-right: 5px;
-    
-}
 
+.loading{
+    left: 48%;
+    top: 55%;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border-top: solid 4px $color-primary;
+    display: flex;
+    margin: auto;
+    animation: rotation .5s linear infinite ;
+    @media (max-width: 768px){
+        left: 42%;
+    }
+    @media (max-width: 480px){
+        left: 38%;
+    }   
+    &2{
+        left: 43%;
+        top: 45%;
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        border-bottom: solid 4px $color-tertiary;
+        display: flex;
+        margin: auto;
+        animation: rotation 1.5s linear infinite reverse ;
+        @media (max-width: 768px){
+            left: 40%;
+        }
+        @media (max-width: 480px){
+            left: 35%;
+        } 
+    }
+    &3{
+        left: 50%;
+        top: 50%;
+        position: absolute;
+        height: 75px;
+        width: 75px;
+        border-radius: 50%;
+        border-bottom: solid 4px $color-secondary;
+        display: flex;
+        margin: auto;
+        animation: rotation 1s linear infinite ;
+        @media (max-width: 768px){
+            left: 38%;
+        }
+        @media (max-width: 480px){
+            left: 32%;
+        } 
+
+    }
+    &__box{
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        animation: getout .8s 1.5s ease-in-out both;
+        background-color: $color-maploc;
+    }
+}
 
