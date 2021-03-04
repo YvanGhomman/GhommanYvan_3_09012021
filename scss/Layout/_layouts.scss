@@ -46,7 +46,6 @@ a{
             &:hover{
                 color: $color-primary
             }
-            
         }
     }
 }
@@ -69,7 +68,6 @@ a{
         box-shadow:inset 0px 2px 3px 0px grey;
         &--mark{
             padding-right: 10px;
-
         }
         &--input{
             text-align: center;
@@ -132,7 +130,6 @@ a{
     margin: 20px 0 20px 0;
     scale: 1;
     transition: transform 200ms;
-    
     & p{
         background-color: $color-primary;
         color: white;
@@ -185,6 +182,7 @@ a{
         flex-wrap: wrap;
     }
 }
+
 .rest{
     position: relative;
     @include shadow-box ($color-maploc);
@@ -233,17 +231,17 @@ a{
         &__txt{
             line-height: 5px;
         }
-    & i{
-        font-size: 25px;
-        padding-right: 15px;
-        opacity: 0.5;
-        transition: opacity 1000ms;
-        &:hover{
-            @include heart;
-            opacity: 1;
+        & i{
+            font-size: 25px;
+            padding-right: 15px;
+            opacity: 0.5;
+            transition: opacity 1000ms;
+            &:hover{
+                @include heart;
+                opacity: 1;
+            }
         }
     }
-}
 }
 
 .footer{
@@ -311,7 +309,6 @@ a{
         margin: 0px 0px 50px 0px;
         justify-items: center;
         display: block;
-
 
         & h2{
             margin-left: 10px;
@@ -441,8 +438,7 @@ a{
         transition: all 0.5s ease-in-out;
         height: 50px;
         padding: -15px -15px -15px 0;
-
-
+        font-weight: bolder;
     }
 }
 
@@ -461,20 +457,15 @@ a{
         max-width: 1024px;
     }
 }
-.strong{
-    font-weight: bolder;
-}
+
 
 .loading{
+    @include loader;
     left: 48%;
     top: 25%;
-    position: absolute;
     height: 100px;
     width: 100px;
-    border-radius: 50%;
     border-top: solid 4px $color-primary;
-    display: flex;
-    margin: auto;
     animation: rotation .8s linear infinite ;
     @media (max-width: 768px){
         left: 42%;
@@ -483,15 +474,12 @@ a{
         left: 38%;
     }   
     &2{
+        @include loader;
         left: 43%;
         top: 20%;
-        position: absolute;
         height: 150px;
         width: 150px;
-        border-radius: 50%;
         border-bottom: solid 4px $color-tertiary;
-        display: flex;
-        margin: auto;
         animation: rotation 1.5s linear infinite reverse ;
         @media (max-width: 768px){
             left: 40%;
@@ -501,15 +489,12 @@ a{
         } 
     }
     &3{
+        @include loader;
         left: 50%;
         top: 19%;
-        position: absolute;
         height: 75px;
         width: 75px;
-        border-radius: 50%;
         border-bottom: solid 4px $color-secondary;
-        display: flex;
-        margin: auto;
         animation: rotation .5s linear infinite ;
         @media (max-width: 768px){
             left: 38%;
@@ -517,7 +502,6 @@ a{
         @media (max-width: 480px){
             left: 32%;
         } 
-
     }
     &__box{
         position: absolute;

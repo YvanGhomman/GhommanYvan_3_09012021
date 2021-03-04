@@ -62,3 +62,9 @@
     @include shadow-box($color-button-shadow-hover);
     background: linear-gradient(to bottom right, lighten($color-secondary, 5%), lighten($color-primary, 5%));
 }
+@mixin loader {
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    margin: auto;
+}

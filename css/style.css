@@ -510,6 +510,7 @@ a {
   transition: all 0.5s ease-in-out;
   height: 50px;
   padding: -15px -15px -15px 0;
+  font-weight: bolder;
 }
 
 .bckg {
@@ -531,20 +532,16 @@ a {
   }
 }
 
-.strong {
-  font-weight: bolder;
-}
-
 .loading {
-  left: 48%;
-  top: 25%;
   position: absolute;
-  height: 100px;
-  width: 100px;
   border-radius: 50%;
-  border-top: solid 4px #9356DC;
   display: flex;
   margin: auto;
+  left: 48%;
+  top: 25%;
+  height: 100px;
+  width: 100px;
+  border-top: solid 4px #9356DC;
   animation: rotation 0.8s linear infinite;
 }
 @media (max-width: 768px) {
@@ -558,15 +555,15 @@ a {
   }
 }
 .loading2 {
-  left: 43%;
-  top: 20%;
   position: absolute;
-  height: 150px;
-  width: 150px;
   border-radius: 50%;
-  border-bottom: solid 4px #99E2D0;
   display: flex;
   margin: auto;
+  left: 43%;
+  top: 20%;
+  height: 150px;
+  width: 150px;
+  border-bottom: solid 4px #99E2D0;
   animation: rotation 1.5s linear infinite reverse;
 }
 @media (max-width: 768px) {
@@ -580,15 +577,15 @@ a {
   }
 }
 .loading3 {
-  left: 50%;
-  top: 19%;
   position: absolute;
-  height: 75px;
-  width: 75px;
   border-radius: 50%;
-  border-bottom: solid 4px #FF79DA;
   display: flex;
   margin: auto;
+  left: 50%;
+  top: 19%;
+  height: 75px;
+  width: 75px;
+  border-bottom: solid 4px #FF79DA;
   animation: rotation 0.5s linear infinite;
 }
 @media (max-width: 768px) {
