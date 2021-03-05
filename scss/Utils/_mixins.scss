@@ -51,6 +51,7 @@
     width: 100%;
 }
 @mixin bouton{
+    @include Font-txt;
     border-radius: 30px;
     border: none;
     background: linear-gradient(to bottom right, $color-secondary, $color-primary);

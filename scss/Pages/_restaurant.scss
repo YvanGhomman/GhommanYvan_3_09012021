@@ -69,7 +69,7 @@
         width: 180px;
         @include bouton;
         margin: 50px auto 0px;
-        scale: 1;
+        transform: scale(1);
         transition: transform 200ms;
         &:hover{
             @include button--hover;
@@ -108,7 +108,7 @@
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
-        padding: -15px 0;
+        padding: 0;
 
     }
     &:hover .check-price{
@@ -138,7 +138,7 @@
     width: 80%;
     transition: all 0.5s ease-in-out;
     height: 50px;
-    padding: -15px 0;
+    padding: 0;
     & p{
         margin: 0;
         padding: 7px 0 0 0;
@@ -181,7 +181,7 @@
         margin: 65px 30px 0 0;
         transition: all 0.5s ease-in-out;
         height: 50px;
-        padding: -15px -15px -15px 0;
+        padding: 0;
         font-weight: bolder;
     }
 }
