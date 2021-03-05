@@ -25,6 +25,7 @@ body {
 }
 @media (max-width: 480px) {
   .loading {
+    top: 11%;
     left: 38%;
   }
 }
@@ -47,6 +48,7 @@ body {
 }
 @media (max-width: 480px) {
   .loading2 {
+    top: 15%;
     left: 35%;
   }
 }
