@@ -57,6 +57,7 @@
     box-shadow: 0px 5px 10px 1px grey;
     color: white;
     cursor: pointer;
+    outline: none;
 }
 @mixin button--hover {
     @include shadow-box($color-button-shadow-hover);

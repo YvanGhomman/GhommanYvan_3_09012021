@@ -33,6 +33,7 @@
             padding-right: 10px;
             opacity: 0.5;
             transition: opacity 1000ms;
+            cursor: pointer;
             &:hover{
                 @include heart;
                 opacity: 1;
@@ -80,6 +81,7 @@
 
 .menu__plates--elm{
     display: flex;
+    cursor: pointer;
     justify-content: space-between;
     position: relative;
     @include shadow-box($color-maploc);
